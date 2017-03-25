@@ -1,8 +1,8 @@
-<canvas id="myChart1" width="300" height="100"></canvas>
+<canvas id="myChart4" width="300" height="100"></canvas>
 <script src="js/chart.js"></script>
 <script>
-    var ctx1 = document.getElementById("myChart1");
-    var myChart1 = new Chart(ctx1, {
+    var ctx1 = document.getElementById("myChart4");
+    var myChart4 = new Chart(ctx1, {
         type: 'bar',
         data: {
             labels: ["IT", "CSE", "MECH", "ETCX"],

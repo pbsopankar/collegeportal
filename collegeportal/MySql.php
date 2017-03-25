@@ -1,4 +1,5 @@
 <?php
+
 include 'IConstat.php';
 
 class MysqlConnection implements IConstat {
@@ -104,7 +105,7 @@ class MysqlConnection implements IConstat {
      * @return type
      */
     static function fetchByPrimary($tbl, $pkvalue, $pkcolumn) {
-   echo     $query = "SELECT * FROM $tbl WHERE $pkcolumn = $pkvalue  ";
+        $query = "SELECT * FROM $tbl WHERE $pkcolumn = $pkvalue  ";
         $resource = MysqlConnection::executeQuery($query);
         $result = MysqlConnection::toArrays($resource);
         return $result[0];

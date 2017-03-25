@@ -1,19 +1,22 @@
-<?php 
+<?php
 error_reporting(0);
+session_start();
 //include './IConstat.php';
 include './MySql.php';
 $page = $_GET["page"];
 
+if (!isset($_SESSION["result"])) {
+    header("location:login.php");
+}
 
 $explod = explode("_", $page);
 if (count($explod) == 2) {
     $pagename = $page;
     $dirname = $explod[1];
-    $page = $dirname."/".$pagename;
+    $page = $dirname . "/" . $pagename;
 } else {
-    $page = "dashboard/dashboard";
+    $page = "dashboard";
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -2,7 +2,7 @@
 $param = base64_decode($_GET["param"]);
 if (!empty($param)) {
     //MysqlConnection::delete(MysqlConnection::TBL_WALLET, $param);
-    //header("location:index.php?page=page=view_branch");
+    //header("location:index.php?page=page=view_student");
 }
 ?>
 <div class="main-content-inner">
@@ -22,7 +22,7 @@ if (!empty($param)) {
             <h1>
                 <small>
                     <i class="ace-icon fa fa-angle-double-right"></i>
-                    <a href="index.php?page=add_branch">Add Branch</a>
+                    <a href="index.php?page=add_student">Add Student</a>
                 </small>
             </h1>
         </div>
@@ -42,7 +42,7 @@ if (!empty($param)) {
                             </thead>
                             <tbody>
                                 <?php
-                                $result = MysqlConnection::fetchAll(MysqlConnection::TBL_BRANCH);
+                                $result = MysqlConnection::fetchAll(MysqlConnection::TBL_STUDENT);
 //                                print_r($result);
                                 $srno = 1;
                                 foreach ($result as $value) {
@@ -51,7 +51,7 @@ if (!empty($param)) {
                                     ?>
                                     <tr>
                                         <td><?php echo $srno ?></td><!-- srno -->
-                                        <td><a href="index.php?page=add_branch&param=<?php echo $encodeId ?>"><i class="ace-icon fa fa-edit"></i></a></td><!-- srno -->
+                                        <td><a href="index.php?page=add_student&param=<?php echo $encodeId ?>"><i class="ace-icon fa fa-edit"></i></a></td><!-- srno -->
                                         <td><?php echo $value["txtDeptName"] ?></td>
                                         <td>
                                             <?php
@@ -62,7 +62,6 @@ if (!empty($param)) {
                                             }
                                             ?>
                                         </td>
-
                                     </tr>
                                     <?php
                                     $srno++;
@@ -84,5 +83,4 @@ if (!empty($param)) {
         }
         return false;
     }
-
 </script>

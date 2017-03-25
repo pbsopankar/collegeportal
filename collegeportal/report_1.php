@@ -1,4 +1,4 @@
-<canvas id="myChart1" width="300" height="100"></canvas>
+<canvas id="myChart1" width="100%" height="100%"></canvas>
 <script src="js/chart.js"></script>
 <script>
     var ctx1 = document.getElementById("myChart1");

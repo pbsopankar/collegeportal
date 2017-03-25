@@ -1,8 +1,8 @@
-<canvas id="myChart1" width="300" height="100"></canvas>
+<canvas id="myChart2" width="100%" height="100%"></canvas>
 <script src="js/chart.js"></script>
 <script>
-    var ctx1 = document.getElementById("myChart1");
-    var myChart1 = new Chart(ctx1, {
+    var ctx1 = document.getElementById("myChart2");
+    var myChart2 = new Chart(ctx1, {
         type: 'pie',
         data: {
             labels: ["2015", "2016", "2017", "2018"],

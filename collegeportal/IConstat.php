@@ -9,7 +9,6 @@ interface IConstat {
     const USERNAME = "root";
     const PASSWORD = "";
 
-    ////
     const TBL_DEPARTMENT = "tbl_department";
     const TBL_BRANCH = "tbl_branch";
     const TBL_BOOK = "tbl_book";
@@ -20,5 +19,6 @@ interface IConstat {
     const TBL_NOTICE = "tbl_notice";
     const TBL_NOTES = "tbl_notes";
     const TBL_FORUM = "tbl_forum";
-    ///
+    const TBL_USER = "tbl_user";
+
 }
