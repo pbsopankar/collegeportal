@@ -79,7 +79,7 @@ $userTYpe = $_SESSION["result"][0]["txtUserType"];
         </li>
 
         <?php
-    } else {
+    } else if($userTYpe == 3){
         ?>
         <li class="">
             <a href="index.php?page=view_complaints"  >

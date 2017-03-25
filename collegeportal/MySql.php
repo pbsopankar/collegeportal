@@ -5,8 +5,14 @@ include 'IConstat.php';
 class MysqlConnection implements IConstat {
 
     static function connect() {
-        $mysqlCon = mysql_connect(IConstat::HOSTNAME, IConstat::USERNAME, IConstat::PASSWORD);
-        mysql_select_db(IConstat::DBNAME, $mysqlCon);
+
+        if ($_SERVER["REMOTE_ADDR"] == "localhost" || $_SERVER["REMOTE_ADDR"] == "127.0.0.1") {
+            $mysqlCon = mysql_connect(IConstat::HOSTNAME, IConstat::USERNAME, IConstat::PASSWORD);
+            mysql_select_db(IConstat::DBNAME, $mysqlCon);
+        } else {
+            $mysqlCon = mysql_connect(IConstat::S_HOSTNAME, IConstat::S_USERNAME, IConstat::S_PASSWORD);
+            mysql_select_db(IConstat::S_DBNAME, $mysqlCon);
+        }
     }
 
     /**

@@ -8,6 +8,11 @@ interface IConstat {
     const HOSTNAME = "localhost";
     const USERNAME = "root";
     const PASSWORD = "";
+    
+    const S_DBNAME = "db_collgeportal";
+    const S_HOSTNAME = "127.9.9.2";
+    const S_USERNAME = "adminQzbipNt";
+    const S_PASSWORD = "fhADXS8l8r3h";
 
     const TBL_DEPARTMENT = "tbl_department";
     const TBL_BRANCH = "tbl_branch";

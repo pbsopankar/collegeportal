@@ -6,8 +6,6 @@ ob_start();
 $txtUsername = $_POST["txtUsername"];
 $txtPassword = $_POST["txtPassword"];
 
-
-
 if (isset($_POST["txtUsername"])) {
     $query = "SELECT * FROM `tbl_user` WHERE "
             . " `txtUsername` = '$txtUsername' AND "
@@ -37,7 +35,7 @@ if (isset($_POST["txtUsername"])) {
         <link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
     </head>
 
-    <body class="login-layout" style="background-color: white;color: black">
+    <body class="login-layout">
         <form name="frmLogin" method="POST" action="">
             <div class="main-container">
                 <div class="main-content">
